@@ -1,4 +1,4 @@
-package net.mysterymod.addon.version_specific;
+package net.mysterymod.fullbright.version_specific;
 
 import net.minecraft.client.Minecraft;
 import net.mysterymod.fullbright.FullbrightAddon;

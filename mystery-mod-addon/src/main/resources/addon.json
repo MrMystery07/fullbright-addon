@@ -3,5 +3,5 @@
   "version" : "1.0.1",
   "description" : "Dieses Addon macht dein Minecraft heller!",
   "authors"  : ["MrMystery"],
-  "mainClass" : "net.mysterymod.addon.MysteryModAddonMain"
+  "mainClass" : "net.mysterymod.fullbright.FullbrightAddon"
 }
