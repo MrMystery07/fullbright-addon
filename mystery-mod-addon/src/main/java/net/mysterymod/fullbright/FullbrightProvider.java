@@ -1,7 +1,5 @@
-package net.mysterymod.addon;
+package net.mysterymod.fullbright;
 
-import com.google.inject.Inject;
-import lombok.RequiredArgsConstructor;
 import net.mysterymod.mod.addon.AddonSettingsProvider;
 import net.mysterymod.mod.gui.settings.SettingsGui;
 import net.mysterymod.mod.gui.settings.component.SettingsComponent;
@@ -16,7 +14,7 @@ public class FullbrightProvider implements AddonSettingsProvider {
   public FullbrightConfig config;
 
   public FullbrightProvider(){
-    config = MysteryModAddonMain.config;
+    config = FullbrightAddon.config;
   }
 
   @Override
@@ -32,7 +30,7 @@ public class FullbrightProvider implements AddonSettingsProvider {
           // Toggle listener
           config.setEnabled(toggleState);
           config.saveConfig();
-          MysteryModAddonMain.onSliderChanged();
+          FullbrightAddon.onSliderChanged();
         },
         config.isEnabled()
       ));
@@ -51,7 +49,7 @@ public class FullbrightProvider implements AddonSettingsProvider {
         newValue -> {
           config.setSlider(newValue.floatValue());
           config.saveConfig();
-          MysteryModAddonMain.onSliderChanged();
+          FullbrightAddon.onSliderChanged();
         }));
   }
 }

@@ -1,11 +1,8 @@
 package net.mysterymod.addon.version_specific;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.entity.EntityOtherPlayerMP;
-import net.mysterymod.addon.MysteryModAddonMain;
-import net.mysterymod.mod.MysteryMod;
+import net.mysterymod.fullbright.FullbrightAddon;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -18,19 +15,19 @@ public class MixinMinecraft {
   public void configureGammaValue(CallbackInfo callbackInfo){
     if(inited == false){
       inited = true;
-      if (MysteryModAddonMain.config.isEnabled()) {
-        Minecraft.getMinecraft().gameSettings.gammaSetting = MysteryModAddonMain.config.getSlider();
+      if (FullbrightAddon.config.isEnabled()) {
+        Minecraft.getMinecraft().gameSettings.gammaSetting = FullbrightAddon.config.getSlider();
       }else{
         Minecraft.getMinecraft().gameSettings.gammaSetting = 0.0F;
       }
     }
-    if(MysteryModAddonMain.hasToUpdate) {
-      if (MysteryModAddonMain.config.isEnabled()) {
-        Minecraft.getMinecraft().gameSettings.gammaSetting = MysteryModAddonMain.config.getSlider();
+    if(FullbrightAddon.hasToUpdate) {
+      if (FullbrightAddon.config.isEnabled()) {
+        Minecraft.getMinecraft().gameSettings.gammaSetting = FullbrightAddon.config.getSlider();
       }else{
         Minecraft.getMinecraft().gameSettings.gammaSetting = 0.0F;
       }
-      MysteryModAddonMain.hasToUpdate = false;
+      FullbrightAddon.hasToUpdate = false;
     }
   }
 

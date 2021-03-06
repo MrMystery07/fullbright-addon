@@ -1,4 +1,4 @@
-package net.mysterymod.addon;
+package net.mysterymod.fullbright;
 
 import com.google.inject.Singleton;
 import lombok.Getter;
