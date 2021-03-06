@@ -16,7 +16,7 @@ public class FullbrightProvider implements AddonSettingsProvider {
   public FullbrightConfig config;
 
   public FullbrightProvider(){
-    config = MysteryModAddon.config;
+    config = MysteryModAddonMain.config;
   }
 
   @Override
@@ -32,7 +32,7 @@ public class FullbrightProvider implements AddonSettingsProvider {
           // Toggle listener
           config.setEnabled(toggleState);
           config.saveConfig();
-          MysteryModAddon.onSliderChanged();
+          MysteryModAddonMain.onSliderChanged();
         },
         config.isEnabled()
       ));
@@ -51,7 +51,7 @@ public class FullbrightProvider implements AddonSettingsProvider {
         newValue -> {
           config.setSlider(newValue.floatValue());
           config.saveConfig();
-          MysteryModAddon.onSliderChanged();
+          MysteryModAddonMain.onSliderChanged();
         }));
   }
 }

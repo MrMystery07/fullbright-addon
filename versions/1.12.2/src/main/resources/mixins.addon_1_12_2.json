@@ -2,9 +2,9 @@
   "required": true,
   "package": "net.mysterymod.addon.version_specific",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "mixins.refmap.json",
+  "refmap": "mixins.addon.refmap.json",
   "minVersion": "0.7",
   "mixins": [
-    "TestMixin"
+    "MixinMinecraft"
   ]
 }

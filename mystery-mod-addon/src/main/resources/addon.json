@@ -1,7 +1,7 @@
 {
-  "name" : "§e§lFullBright§r",
-  "version" : "1.0.0",
-  "description" : "§r§7Dieses Addon macht dein Minecraft heller!",
-  "authors"  : ["§b§lMrMystery"],
-  "mainClass" : "net.mysterymod.addon.MysteryModAddon"
+  "name" : "FullBright",
+  "version" : "1.0.1",
+  "description" : "Dieses Addon macht dein Minecraft heller!",
+  "authors"  : ["MrMystery"],
+  "mainClass" : "net.mysterymod.addon.MysteryModAddonMain"
 }
